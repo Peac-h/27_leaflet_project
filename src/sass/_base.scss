@@ -1,0 +1,67 @@
+@import "../../node_modules/leaflet/dist/leaflet.css";
+
+:root {
+  --col-light: #d7d7d7;
+  --col-white: #fff;
+  --col-green: #a5a58d;
+  --col-bright-green: #c3cd9f;
+  --col-dark: #181c15;
+  --col-opacity: rgba(195, 205, 159, 0.2);
+
+  --font-handwriting: "Nanum Pen Script", cursive;
+  --font-type: "Roboto Mono", monospace;
+}
+
+$bp-medium: 50em; ///////////// 800px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+  grid-template-columns: minmax(40rem, 40vw) 1fr;
+  padding: 1rem;
+
+  font-family: var(--font-handwriting);
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: var(--col-light);
+
+  @media only screen and (max-width: $bp-medium) {
+    height: 150vh;
+    overflow-y: scroll;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 75vh);
+  }
+
+  button,
+  input,
+  textarea {
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+  }
+
+  button {
+    border-radius: 1rem;
+    padding: 0 1rem;
+  }
+}

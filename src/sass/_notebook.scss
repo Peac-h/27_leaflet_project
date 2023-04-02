@@ -1,0 +1,132 @@
+.details {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+
+  background: var(--col-dark);
+  border-right: 1rem solid var(--col-white);
+  border-radius: 3px;
+  padding: 1rem;
+
+  position: relative;
+
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--col-bright-green);
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-row: 2;
+    border-top: 1rem solid var(--col-white);
+    border-right: none;
+  }
+
+  &__header {
+    &:hover img {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    input {
+      width: 100%;
+
+      text-align: center;
+      font-size: 3rem;
+
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+
+      &:focus {
+        border-bottom: 2px dashed var(--col-light);
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 1.2rem;
+      right: 0.8rem;
+
+      height: 3.5rem;
+      width: 3.5rem;
+
+      opacity: 0;
+      visibility: hidden;
+      cursor: pointer;
+    }
+  }
+
+  .details__text-field {
+    font-family: var(--font-type);
+    font-size: 1.7rem;
+    letter-spacing: -0.5px;
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+
+      button {
+        letter-spacing: -0.5px;
+        font-weight: 500;
+
+        &:hover {
+          color: var(--col-green);
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: fit-content;
+      background: var(--col-opacity);
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  .notes {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    gap: 1rem;
+    padding-bottom: 4rem;
+
+    .controls {
+      display: flex;
+      margin-bottom: 0.5rem;
+
+      .date {
+        margin-right: auto;
+        padding-left: 1rem;
+        color: var(--col-green);
+      }
+
+      button {
+        color: var(--col-green);
+
+        &:hover {
+          color: var(--col-bright-green);
+        }
+      }
+    }
+
+    .note-text {
+      background: var(--col-opacity);
+      padding: 1rem;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+  }
+}
