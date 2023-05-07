@@ -1,1 +1,77 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Leaflet Project, coded by the Peach."><meta name="keywords" content="HTML, CSS, Sass, Javascript, Coding"><meta name="author" content="the Peach"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/index.6959bb8d.css"><script type="module" src="/index.94bde299.js"></script><script src="/index.d85ac904.js" nomodule defer></script><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.141c913c.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.c95cdf15.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.ba03de17.png"><title>A Traveller's Notebook</title></head><body> <div class="details"> <div class="details__header"> <input id="headTitle" type="text" value="A Travelers Notebook" disabled> <img id="editHeaderBtn" src="/edit.d95d87b4.png" alt="edit"> </div> <div class="details__text-field"> <div class="controls"> <div id="dateNow"></div> <button id="saveNote">save</button> </div> <textarea id="noteArea" placeholder="Choose a location and write your note here."></textarea> </div> <div class="notes" id="notes">  </div> <div class="credits-to"> <p>Inspired by Jonas Schmedtmann's Mapty project.</p> <p>Modified and coded with best wishes, by Peach.</p> </div> </div> <div class="map" id="map"></div> <button class="my-loc" id="myLoc">My-L</button> <div class="use"> <div class="show-use" id="showUse"> Choose a location and write your note in the note area. The app will remember both your note and the chosen location. Afterwards, you can click on your note and it will bring you to that location, bringing out your memories. </div> <button class="how-use" id="hUse">Use</button> </div> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Leaflet Project, coded by the Peach." />
+    <meta name="keywords" content="HTML, CSS, Sass, Javascript, Coding" />
+    <meta name="author" content="the Peach" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.6959bb8d.css" />
+    <script type="module" src="./index.94bde299.js"></script>
+    <script src="./index.d85ac904.js" nomodule defer></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.141c913c.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.c95cdf15.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.ba03de17.png"
+    />
+    <title>A Traveller's Notebook</title>
+  </head>
+  <body>
+    <div class="details">
+      <div class="details__header">
+        <input
+          id="headTitle"
+          type="text"
+          value="A Travelers Notebook"
+          disabled
+        />
+        <img id="editHeaderBtn" src="./edit.d95d87b4.png" alt="edit" />
+      </div>
+      <div class="details__text-field">
+        <div class="controls">
+          <div id="dateNow"></div>
+          <button id="saveNote">save</button>
+        </div>
+        <textarea
+          id="noteArea"
+          placeholder="Choose a location and write your note here."
+        ></textarea>
+      </div>
+      <div class="notes" id="notes"></div>
+      <div class="credits-to">
+        <p>Inspired by Jonas Schmedtmann's Mapty project.</p>
+        <p>Modified and coded with best wishes, by Peach.</p>
+      </div>
+    </div>
+    <div class="map" id="map"></div>
+    <button class="my-loc" id="myLoc">My-L</button>
+    <div class="use">
+      <div class="show-use" id="showUse">
+        Choose a location and write your note in the note area. The app will
+        remember both your note and the chosen location. Afterwards, you can
+        click on your note and it will bring you to that location, bringing out
+        your memories.
+      </div>
+      <button class="how-use" id="hUse">Use</button>
+    </div>
+  </body>
+</html>
