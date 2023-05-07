@@ -10,13 +10,9 @@ This project is inspired by Jonas Schmedtmann's Mapty project. However, the app 
 
 ## Checkout The Live Demo
 
-[A Traveller's Notebook]()
+[A Traveller's Notebook](https://peac-h.github.io/27_leaflet_project/)
 
-![A Traveller's Notebook - Desktop]()
-
-![A Traveller's Notebook - Tablet]()
-
-![A Traveller's Notebook - Mobile]()
+![A Traveller's Notebook - Desktop](https://raw.githubusercontent.com/Peac-h/27_leaflet_project/main/Screen%20Shot%202023-05-07%20at%2012.08.40%20PM.png)
 
 ## Features
 
