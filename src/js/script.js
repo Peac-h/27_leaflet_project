@@ -54,6 +54,8 @@ class App {
     setInterval(() => this._renderDate(), 1000);
 
     // attach event handlers
+    document.addEventListener("focusin", this._toggleNoteVisibilityOnFocus);
+    document.addEventListener("focusout", this._toggleNoteVisibilityOnFocus);
     saveNoteBtn.addEventListener("click", this._newNote.bind(this));
     notesEl.addEventListener("click", this._moveToPopup.bind(this));
     editHeaderBtn.addEventListener("click", this._changeHeadTitle.bind(this));
@@ -253,20 +255,6 @@ class App {
     });
   }
 
-  _moveToCurrentLoc(position) {
-    const { latitude } = position.coords;
-    const { longitude } = position.coords;
-
-    const coords = [latitude, longitude];
-
-    this.#map.flyTo(coords, this.#mapZoomLevel, {
-      animate: true,
-      pan: {
-        duration: 1,
-      },
-    });
-  }
-
   _deleteNote(e) {
     // delete note both from DOM and from the notes array and remove its marker
     const noteEl = e.closest(".note");
@@ -290,6 +278,30 @@ class App {
     this.#markers.splice(noteMarkerIndex, 1);
 
     this._setLocalStorage();
+  }
+
+  _moveToCurrentLoc(position) {
+    const { latitude } = position.coords;
+    const { longitude } = position.coords;
+
+    const coords = [latitude, longitude];
+
+    this.#map.flyTo(coords, this.#mapZoomLevel, {
+      animate: true,
+      pan: {
+        duration: 1,
+      },
+    });
+  }
+
+  _toggleNoteVisibilityOnFocus() {
+    const note = notesEl.querySelectorAll(".note");
+
+    if (document.activeElement === noteAreaEl) {
+      note.forEach((note) => note.classList.add("hidden"));
+    } else {
+      note.forEach((note) => note.classList.remove("hidden"));
+    }
   }
 
   _changeHeadTitle() {

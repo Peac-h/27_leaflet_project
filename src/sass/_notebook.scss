@@ -87,46 +87,60 @@
 
     textarea {
       width: 100%;
-      height: fit-content;
+      height: 7rem;
       background: var(--col-opacity);
       border-radius: 1rem;
       margin-bottom: 1rem;
       padding: 0.5rem;
       letter-spacing: -0.5px;
+
+      transition: height 0.4s;
+
+      &:focus {
+        height: 10rem;
+      }
     }
   }
 
   .notes {
     display: flex;
     flex-direction: column;
-    margin-bottom: auto;
     gap: 1rem;
     padding-bottom: 4rem;
 
-    .controls {
-      display: flex;
-      margin-bottom: 0.5rem;
+    .note {
+      transition: all 0.4s;
 
-      .date {
-        margin-right: auto;
-        padding-left: 1rem;
-        color: var(--col-green);
-      }
+      .controls {
+        display: flex;
+        margin-bottom: 0.5rem;
 
-      button {
-        color: var(--col-green);
+        .date {
+          margin-right: auto;
+          padding-left: 1rem;
+          color: var(--col-green);
+        }
 
-        &:hover {
-          color: var(--col-bright-green);
+        button {
+          color: var(--col-green);
+
+          &:hover {
+            color: var(--col-bright-green);
+          }
         }
       }
-    }
 
-    .note-text {
-      background: var(--col-opacity);
-      padding: 1rem;
-      border-radius: 1rem;
-      cursor: pointer;
+      .note-text {
+        background: var(--col-opacity);
+        padding: 1rem;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+
+      &.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
   }
 }
